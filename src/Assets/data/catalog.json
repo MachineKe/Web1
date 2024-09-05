@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Facebook",
+    "description": "Facebook is a social media platform where users connect, share content, and communicate. Launched in 2004, it allows posting updates, sharing media, and engaging in groups. It is now a key tool for networking, entertainment, and business.",
+    "imageUrl": "icons8-facebook-500.png"
+  },
+  {
+    "id": 2,
+    "title": "Instagram",
+    "description": "Instagram is a photo and video sharing platform where users can post content, apply filters, and engage with others through likes and comments. Launched in 2010, it features Stories, Reels, and IGTV.",
+    "imageUrl": "icons8-instagram-500.png"
+  },
+  {
+    "id": 3,
+    "title": "Whatsapp",
+    "description": "WhatsApp is a messaging app that allows users to send text messages, voice notes, photos, and videos. Launched in 2009, it supports one-on-one and group chats and uses end-to-end encryption for privacy. Owned by Meta Platforms, it also offers voice and video calls.",
+    "imageUrl": "icons8-whatsapp-500.png"
+  },
+  {
+    "id": 4,
+    "title": "X",
+    "description": "X, formerly known as Twitter, is a social media platform for sharing short messages called tweets. Launched in 2006, it allows users to post text, images, videos, and links, and engage with others through replies, retweets, and likes. X is used for real-time updates, news, and discussions.",
+    "imageUrl": "icons8-twitter-500.png"
+  }
+]
