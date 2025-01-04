@@ -38,7 +38,7 @@ const Register = () => {
       <div className="flex flex-col items-center justify-center min-h-screen">
         <img
           className="w-16 h-16 mb-4"
-          src="https://cdn.pixabay.com/animation/2023/10/08/03/19/03-19-26-213_512.gif"
+          src="https://cdn.pixabay.com/animation/2024/07/27/09/34/09-34-07-906_512.gif"
           alt="Loading..."
         />
         <h1 className="text-xl font-semibold text-gray-700">Loading ...</h1>

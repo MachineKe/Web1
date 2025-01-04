@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
+import swal from 'sweetalert';
 
 const booksData = [
   {
@@ -51,7 +52,7 @@ const Library = () => {
 
   const confirmReservation = () => {
     setReservations([...reservations, { book: selectedBook, startDate, endDate }]);
-    alert(`Book reserved: ${selectedBook.bookName} from ${startDate.toDateString()} to ${endDate.toDateString()}`);
+    swal(`Book reserved: ${selectedBook.bookName} from ${startDate.toDateString()} to ${endDate.toDateString()}`);
     setSelectedBook(null);
   };
 
@@ -60,13 +61,13 @@ const Library = () => {
   };
 
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">Library</h1>
+    <div className="container mx-auto p-4 bg-gray-100 min-h-screen">
+      <h1 className="text-2xl font-bold mb-4 text-green-600">Library</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         {booksData.map((book, index) => (
-          <div key={index} className="border p-4 rounded-lg shadow-lg">
-            <img src={book.bookImage} alt={book.bookName} className="w-full h-64 object-cover mb-4" />
-            <h2 className="text-xl font-semibold">{book.bookName}</h2>
+          <div key={index} className="border p-4 rounded-lg shadow-lg bg-white">
+            <img src={book.bookImage} alt={book.bookName} className="w-full h-64 object-cover mb-4 rounded" />
+            <h2 className="text-xl font-semibold text-green-800">{book.bookName}</h2>
             <p className="text-gray-700">Author: {book.bookAuthors}</p>
             <p className="text-gray-700">Publisher: {book.bookPublisher}</p>
             {isBookReserved(book.bookName) ? (
@@ -79,7 +80,7 @@ const Library = () => {
             ) : (
               <button
                 onClick={() => handleReserve(book)}
-                className="mt-4 bg-blue-500 text-white py-2 px-4 rounded"
+                className="mt-4 bg-green-500 text-white py-2 px-4 rounded"
               >
                 Reserve Book
               </button>
@@ -91,7 +92,7 @@ const Library = () => {
       {selectedBook && (
         <div className="fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center">
           <div className="bg-white p-8 rounded-lg shadow-lg">
-            <h2 className="text-xl font-semibold mb-4">Select Reservation Dates</h2>
+            <h2 className="text-xl font-semibold mb-4 text-green-800">Select Reservation Dates</h2>
             <DatePicker
               selected={startDate}
               onChange={handleDateChange}
