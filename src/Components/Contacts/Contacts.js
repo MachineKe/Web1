@@ -75,26 +75,26 @@ const Contacts = () => {
   };
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="container mx-auto p-4 bg-gray-100 min-h-screen">
       <div className="mb-4">
         <input
           type="text"
           placeholder="Search contacts..."
           value={searchQuery}
           onChange={handleSearch}
-          className="w-full p-2 border border-gray-300 rounded"
+          className="w-full p-2 border border-gray-300 rounded bg-white"
         />
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {filteredContacts.map(contact => (
           <div
             key={contact.id}
-            className="bg-white p-4 rounded shadow hover:bg-gray-100 cursor-pointer"
+            className="bg-white p-4 rounded shadow hover:bg-green-100 cursor-pointer"
             onClick={() => handleContactClick(contact.phone)}
           >
             <img src={require(`./images/${contact.picture}`)} alt={contact.name} className="w-16 h-16 rounded-full mx-auto" />
             <div className="text-center mt-2">
-              <h2 className="text-lg font-semibold">{contact.name}</h2>
+              <h2 className="text-lg font-semibold text-green-800">{contact.name}</h2>
               <p className="text-gray-600">{contact.phone}</p>
               <p className="text-blue-600 underline">{contact.email}</p>
             </div>

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';
-import swal from 'sweetalert';
 import 'react-datepicker/dist/react-datepicker.css';
 
 const booksData = [
@@ -52,12 +51,7 @@ const Library = () => {
 
   const confirmReservation = () => {
     setReservations([...reservations, { book: selectedBook, startDate, endDate }]);
-    swal({
-      title: "Book Reserved!",
-      text: `${selectedBook.bookName} from ${startDate.toDateString()} to ${endDate.toDateString()}`,
-      icon: "success",
-      button: "OK"
-    });
+    alert(`Book reserved: ${selectedBook.bookName} from ${startDate.toDateString()} to ${endDate.toDateString()}`);
     setSelectedBook(null);
   };
 

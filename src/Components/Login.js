@@ -27,7 +27,7 @@ const Login = () => {
 
   if (loading) {
     return (
-      <div className="flex flex-col items-center justify-center min-h-screen">
+      <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
         <img
           className="w-16 h-16 mb-4"
           src="https://cdn.pixabay.com/animation/2023/10/08/03/19/03-19-26-213_512.gif"
@@ -45,13 +45,13 @@ const Login = () => {
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
       <div className="bg-white shadow-lg rounded-lg p-8 max-w-md w-full">
-        <h1 className="text-3xl font-bold text-center mb-6">Login Page</h1>
-        <hr className="mb-6" />
+        <h1 className="text-3xl font-bold text-center mb-6 text-green-600">Login Page</h1>
+        <hr className="mb-6 border-green-600" />
         <form onSubmit={onSubmit}>
           <div className="mb-4">
             <label className="block text-gray-700 text-sm font-bold mb-2">Username</label>
             <input
-              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
               placeholder="Username"
               type="text"
               required
@@ -63,7 +63,7 @@ const Login = () => {
           <div className="mb-6">
             <label className="block text-gray-700 text-sm font-bold mb-2">Password</label>
             <input
-              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
               placeholder="Password"
               type="password"
               required
@@ -74,7 +74,7 @@ const Login = () => {
           </div>
           <div className="mb-6">
             <button
-              className="w-full bg-blue-500 text-white font-bold py-2 rounded-lg hover:bg-blue-600 transition duration-200"
+              className="w-full bg-green-500 text-white font-bold py-2 rounded-lg hover:bg-green-600 transition duration-200"
               type="submit"
             >
               Login
@@ -82,7 +82,7 @@ const Login = () => {
           </div>
           <div className="text-center">
             <p className="text-sm text-gray-700">Don't have an account?</p>
-            <Link to="/register" className="text-blue-500 hover:underline">
+            <Link to="/register" className="text-green-500 hover:underline">
               Register
             </Link>
           </div>

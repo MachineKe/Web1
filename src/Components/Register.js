@@ -53,13 +53,13 @@ const Register = () => {
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
       <div className="bg-white shadow-lg rounded-lg p-8 max-w-lg w-full">
-        <h1 className="text-3xl font-bold text-center mb-6">Registration Page</h1>
-        <hr className="mb-6" />
+        <h1 className="text-3xl font-bold text-center mb-6 text-green-600">Registration Page</h1>
+        <hr className="mb-6 border-green-600" />
         <form onSubmit={onSubmit}>
           <div className="mb-4">
             <label className="block text-gray-700 text-sm font-bold mb-2">Full Name</label>
             <input
-              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
               placeholder="Full Name"
               type="text"
               required
@@ -72,7 +72,7 @@ const Register = () => {
           <div className="mb-4">
             <label className="block text-gray-700 text-sm font-bold mb-2">Username</label>
             <input
-              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
               placeholder="Username"
               type="text"
               required
@@ -85,7 +85,7 @@ const Register = () => {
           <div className="mb-4">
             <label className="block text-gray-700 text-sm font-bold mb-2">Email</label>
             <input
-              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
               placeholder="Email"
               type="email"
               required
@@ -98,7 +98,7 @@ const Register = () => {
           <div className="mb-4">
             <label className="block text-gray-700 text-sm font-bold mb-2">Phone</label>
             <input
-              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
               placeholder="+"
               type="text"
               required
@@ -111,7 +111,7 @@ const Register = () => {
           <div className="mb-4 relative">
             <label className="block text-gray-700 text-sm font-bold mb-2">Password</label>
             <input
-              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
               placeholder="Password"
               type={showPassword ? "text" : "password"}
               required
@@ -131,7 +131,7 @@ const Register = () => {
           <div className="mb-4 relative">
             <label className="block text-gray-700 text-sm font-bold mb-2">Confirm Password</label>
             <input
-              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
               placeholder="Confirm Password"
               type={showPassword ? "text" : "password"}
               required
@@ -158,7 +158,7 @@ const Register = () => {
                   value="Male"
                   checked={values.gender === "Male"}
                   onChange={onChange}
-                  className="form-radio text-blue-500"
+                  className="form-radio text-green-500"
                 />{" "}
                 Male
               </label>
@@ -169,7 +169,7 @@ const Register = () => {
                   value="Female"
                   checked={values.gender === "Female"}
                   onChange={onChange}
-                  className="form-radio text-blue-500"
+                  className="form-radio text-green-500"
                 />{" "}
                 Female
               </label>
@@ -179,7 +179,7 @@ const Register = () => {
           <div className="mb-4">
             <label className="block text-gray-700 text-sm font-bold mb-2">Year of Birth</label>
             <select
-              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
               name="yob"
               value={values.yob}
               onChange={onChange}
@@ -195,7 +195,7 @@ const Register = () => {
 
           <div className="mb-6">
             <button
-              className="w-full bg-blue-500 text-white font-bold py-2 rounded-lg hover:bg-blue-600 transition duration-200"
+              className="w-full bg-green-500 text-white font-bold py-2 rounded-lg hover:bg-green-600 transition duration-200"
               type="submit"
             >
               Register
@@ -204,7 +204,7 @@ const Register = () => {
 
           <div className="text-center">
             <p className="text-sm text-gray-700">Have an account?</p>
-            <Link to="/login" className="text-blue-500 hover:underline">
+            <Link to="/login" className="text-green-500 hover:underline">
               Login
             </Link>
           </div>

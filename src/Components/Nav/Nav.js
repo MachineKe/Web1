@@ -8,7 +8,7 @@ const Nav = () => {
     <nav className="fixed bottom-0 left-0 right-0 bg-white shadow-lg border-t border-gray-200 z-50 flex justify-around items-center h-16">
       <Link to="/" className="nav-item flex flex-col items-center justify-center text-gray-600 hover:text-blue-500">
         <TbHexagonNumber1 className="text-2xl" />
-        <span className="text-xs">Home</span>
+        <span className="text-xs">Cute</span>
       </Link>
 
       <Link to="/travel" className="nav-item flex flex-col items-center justify-center text-gray-600 hover:text-blue-500">

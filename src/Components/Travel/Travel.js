@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 
-
 const Travel = () => {
   const [travelMode, setTravelMode] = useState('');
   const [destination, setDestination] = useState('');
@@ -45,10 +44,10 @@ const Travel = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white flex flex-col items-center p-4">
+    <div className="min-h-screen bg-green-900 text-white flex flex-col items-center p-4">
       <h1 className="text-3xl font-bold mb-4">Travel Mode Selection</h1>
-      <div className="mb-4">
-        <label className="mr-4">
+      <div className="mb-4 flex flex-col sm:flex-row">
+        <label className="mr-4 mb-2 sm:mb-0">
           <input
             type="radio"
             value="boat"
@@ -58,7 +57,7 @@ const Travel = () => {
           />
           Boat
         </label>
-        <label className="mr-4">
+        <label className="mr-4 mb-2 sm:mb-0">
           <input
             type="radio"
             value="train"
@@ -86,7 +85,7 @@ const Travel = () => {
           <select
             value={destination}
             onChange={handleDestinationChange}
-            className="bg-gray-800 text-white p-2 rounded"
+            className="bg-green-800 text-white p-2 rounded w-full sm:w-auto"
           >
             <option value="">Select...</option>
             {travelOptions[travelMode].map((option, index) => (
@@ -98,10 +97,10 @@ const Travel = () => {
         </div>
       )}
 
-      <div className="mb-4">
+      <div className="mb-4 flex flex-col sm:flex-row">
         <button
           onClick={handleSubmit}
-          className="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mr-2"
+          className="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mb-2 sm:mb-0 sm:mr-2"
         >
           Submit
         </button>
@@ -114,7 +113,7 @@ const Travel = () => {
       </div>
 
       {submitted && destination && (
-        <div className="bg-gray-800 p-4 rounded">
+        <div className="bg-green-800 p-4 rounded w-full sm:w-auto">
           <h2 className="text-2xl font-bold mb-2">Selected Destination</h2>
           <p className="text-lg">{destination}</p>
           <p className="text-sm">{travelInfo[destination]}</p>

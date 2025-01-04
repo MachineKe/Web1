@@ -46,7 +46,7 @@ const Catalogue = () => {
 
   return (
     <div
-      className="flex flex-col items-center justify-center p-6 bg-gray-100 min-h-screen"
+      className="flex flex-col items-center justify-center p-6 bg-green-100 min-h-screen"
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
       ref={containerRef}
@@ -57,8 +57,8 @@ const Catalogue = () => {
             key={item.id}
             src={require(`../../Assets/icons/${item.imageUrl}`)}
             alt={item.title}
-            className={`cursor-pointer w-24 h-24 object-cover rounded-lg shadow-md transition-transform transform ${
-              selectedIndex === index ? 'scale-110 border-4 border-blue-500' : 'scale-100'
+            className={`cursor-pointer w-24 h-24 object-cover rounded-full shadow-md transition-transform transform ${
+              selectedIndex === index ? 'scale-110 border-4 border-green-500' : 'scale-100'
             }`}
             onClick={() => handleItemClick(item, index)}
           />
@@ -81,13 +81,13 @@ const Catalogue = () => {
       </div>
       <div className="navigation-buttons mt-6 flex space-x-4">
         <button
-          className="bg-blue-500 text-white px-4 py-2 rounded-md shadow-md hover:bg-blue-600 transition duration-200"
+          className="bg-green-500 text-white px-4 py-2 rounded-md shadow-md hover:bg-green-600 transition duration-200"
           onClick={handlePrevious}
         >
           Previous
         </button>
         <button
-          className="bg-blue-500 text-white px-4 py-2 rounded-md shadow-md hover:bg-blue-600 transition duration-200"
+          className="bg-green-500 text-white px-4 py-2 rounded-md shadow-md hover:bg-green-600 transition duration-200"
           onClick={handleNext}
         >
           Next
