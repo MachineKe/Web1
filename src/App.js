@@ -11,61 +11,61 @@ import Home from "./Components/Home";
 import { Routes, Route, redirect as Redirect } from "react-router-dom";
 import Login from "./Components/Login";
 import Register from "./Components/Register";
-
 import About from "./Components/About";
 import Catalog from "./Components/Catalog/Catalog";
 import Pizza from "./Components/Pizza/Pizza";
+import Travel from "./Components/Travel/Travel";
 import ImageGallery from "./Components/imageClick/ImageClick";
 import Nav from "./Components/Nav/Nav";
+import Contacts from "./Components/Contacts/Contacts";
+import Library from "./Components/Library/Library";
 
 loadDevMessages();
 loadErrorMessages();
 
 function App() {
+  const httpLink = createHttpLink({
+    uri: "https://weba-eiev.onrender.com/",
+    //  uri: 'http://localhost:5000/',
+  });
 
-   const httpLink = createHttpLink({
-    uri: 'https://weba-eiev.onrender.com/',
-        //  uri: 'http://localhost:5000/',
-   });
-  
-  const authLink = setContext(()=>{
-  const token = localStorage.getItem('jwtToken')
-  return {
-    headers: {
-      Authorization: token ? `Bearer ${token}` : ''
-    }
-  }
-})
+  const authLink = setContext(() => {
+    const token = localStorage.getItem("jwtToken");
+    return {
+      headers: {
+        Authorization: token ? `Bearer ${token}` : "",
+      },
+    };
+  });
 
-  
-  
-    const client = new ApolloClient({
+  const client = new ApolloClient({
     link: authLink.concat(httpLink),
     cache: new InMemoryCache(),
   });
-
 
   return (
     <div className="App">
       <ApolloProvider client={client}>
         <AuthProvider>
           <ErrorBoundary>
-<Nav/>
+            <Nav />
             <Routes>
-                            <Route path="/regApp" element={<Home/>} />
-                            <Route path="/login" element={<Login/>} />
+              <Route path="/regApp" element={<Home />} />
+              <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
-              <Route path="/about" element={<About/>}/>
+              <Route path="/about" element={<About />} />
               <Route path="/catalog" element={<Catalog />} />
-                           <Route path="/pizza" element={<Pizza/>}/>
-                           <Route path="/" element={<ImageGallery/>}/>
-
+              <Route path="/pizza" element={<Pizza />} />
+              <Route path="/travel" element={<Travel />} />
+              <Route path="/contacts" element={<Contacts />} />
+              <Route path="/library" element={<Library />} />
+              <Route path="/" element={<ImageGallery />} />
             </Routes>
           </ErrorBoundary>
         </AuthProvider>
-    </ApolloProvider>
+      </ApolloProvider>
     </div>
-  )
+  );
 }
 
 export default App;

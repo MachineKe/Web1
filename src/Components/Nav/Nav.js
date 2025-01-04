@@ -1,7 +1,7 @@
 import React from 'react';
 import { CiHome } from "react-icons/ci";
 import { Link } from 'react-router-dom';
-import { TbHexagonNumber1, TbHexagonNumber2, TbHexagonNumber3, TbHexagonNumber4 } from "react-icons/tb";
+import { TbHexagonNumber1, TbHexagonNumber2, TbHexagonNumber3, TbHexagonNumber4,TbHexagonNumber5,TbHexagonNumber6,TbHexagonNumber7 } from "react-icons/tb";
 
 const Nav = () => {
   return (
@@ -10,18 +10,35 @@ const Nav = () => {
         <TbHexagonNumber1 className="text-2xl" />
         <span className="text-xs">Home</span>
       </Link>
-      <Link to="/pizza" className="nav-item flex flex-col items-center justify-center text-gray-600 hover:text-blue-500">
+
+      <Link to="/travel" className="nav-item flex flex-col items-center justify-center text-gray-600 hover:text-blue-500">
         <TbHexagonNumber2 className="text-2xl" />
+        <span className="text-xs">Travel</span>
+      </Link>
+
+      <Link to="/pizza" className="nav-item flex flex-col items-center justify-center text-gray-600 hover:text-blue-500">
+        <TbHexagonNumber3 className="text-2xl" />
         <span className="text-xs">Pizza</span>
       </Link>
       <Link to="/catalog" className="nav-item flex flex-col items-center justify-center text-gray-600 hover:text-blue-500">
-        <TbHexagonNumber3 className="text-2xl" />
+        <TbHexagonNumber4 className="text-2xl" />
         <span className="text-xs">Catalog</span>
       </Link>
       <Link to="/regApp" className="nav-item flex flex-col items-center justify-center text-gray-600 hover:text-blue-500">
-        <TbHexagonNumber4 className="text-2xl" />
+        <TbHexagonNumber5 className="text-2xl" />
         <span className="text-xs">Reg App</span>
       </Link>
+
+      <Link to="/contacts" className="nav-item flex flex-col items-center justify-center text-gray-600 hover:text-blue-500">
+        <TbHexagonNumber6 className="text-2xl" />
+        <span className="text-xs">Contacts</span>
+      </Link>
+
+      <Link to="/library" className="nav-item flex flex-col items-center justify-center text-gray-600 hover:text-blue-500">
+        <TbHexagonNumber7 className="text-2xl" />
+        <span className="text-xs">Library</span>
+      </Link>
+
     </nav>
   );
 }
